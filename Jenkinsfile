@@ -22,7 +22,7 @@ pipeline {
                     // Stop and remove previous container if exists
                     sh 'docker rm -f web-app || true'
                     // Run new container
-                    sh 'docker run -d -p 8080:80 --name web-app devops-web:latest'
+                    sh 'docker run -d -p 9090:80 --name web-app devops-web:latest'
                 }
             }
         }
