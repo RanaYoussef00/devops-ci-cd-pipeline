@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stage('Checkout') {
-    steps {
-        git branch: 'main', url: 'https://github.com/RanaYoussef00/devops-ci-cd-pipeline.git'
-    }
-}
-
+    stages { 
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/RanaYoussef00/devops-ci-cd-pipeline.git'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
@@ -28,3 +28,4 @@ pipeline {
         }
     }
 }
+
